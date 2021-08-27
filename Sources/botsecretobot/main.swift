@@ -12,8 +12,6 @@ enum Command: String, CaseIterable {
     case unblockpair
     case list
     case play
-    case chatget
-    case chatgive
 }
 
 extension User {
@@ -30,7 +28,8 @@ class Session {
     private var users: [User] = []
     private var blockedMatches: [(User, User)] = []
     private var userMatches: [(User, User)] = []
-    private var userDMs: [Int64: Int64] = [:]
+    private var userGetDMs: [Int64: Int64] = [:]
+    private var userGiveDMs: [Int64: Int64] = [:]
     private var wasPlayedFunction: Bool = false
     
     var wasPlayed: Bool {
@@ -91,16 +90,20 @@ class Session {
     
     func getUserToGetDM(userId: Int64) -> Int64? {
         guard let userToGet = getUserToGet(userId: userId) else { return nil }
-        return self.userDMs[userToGet.id]
+        return self.userGiveDMs[userToGet.id]
     }
     
     func getUserToGiveDM(userId: Int64) -> Int64? {
         guard let userToGive = getUserToGive(userId: userId) else { return nil }
-        return self.userDMs[userToGive.id]
+        return self.userGetDMs[userToGive.id]
     }
     
-    func addUserDM(userId: Int64, chatId: Int64) {
-        self.userDMs[userId] = chatId
+    func addUserGetDM(userId: Int64, chatId: Int64) {
+        self.userGetDMs[userId] = chatId
+    }
+    
+    func addUserGiveDM(userId: Int64, chatId: Int64) {
+        self.userGiveDMs[userId] = chatId
     }
     
     func addUser(newUser: User) -> Bool {
@@ -212,14 +215,16 @@ class Session {
 let START_MESSAGE = "<b>Olá pessoal! 👋</b> Vim aqui para ajudar vocês nesse Amigo Secreto 🎁. Basta chamar todos os amigos que possam estar faltando, fazer as configurações com os comandos /addme, /removeme, /blockpair, /unblockpair e /list e começar o sorteio com o /play.\n\nCaso precise de ajuda com os comandos, basta usar o /help."
 let RESTART_MESSAGE = "Sorteio reiniciado, todas configurações foram removidas! ✅"
 let START_PRIVATE_LOADING = "⌛ Aguarde um momento enquanto eu verifico a situação do seu sorteio..."
-let START_PRIVATE_MESSAGE = "Perfeito, te encontrei!\nVocê está participando de um Amigo Secreto ativo e o participante que te foi sorteado é...\n%@ @%@\n\n<b>⚠️NÃO DIVULGUE ESSA INFORMAÇÃO!⚠️</b>\nSomente use este chat para entrar em contato com quem você deve presentear e com quem te presenteou. Para isso, use os comandos /chatget e /chatgive seguido da mensagem que deseja enviar."
+let START_PRIVATE_GET_MESSAGE = "<b>✅ Perfeito, te encontrei!</b>\nVocê está participando de um Amigo Secreto ativo. Use somente este chat para entrar em contato com quem te presenteará."
+let START_PRIVATE_GIVE_MESSAGE = "<b>✅ Perfeito, te encontrei!</b>\nVocê está participando de um Amigo Secreto ativo e o participante que te foi sorteado é...\n%@ @%@\n\n<b>⚠️NÃO DIVULGUE ESSA INFORMAÇÃO!⚠️</b>\nUse somente este chat para entrar em contato com quem você deve presentear."
 let START_PRIVATE_ERROR = "❌ Não encontrei nenhum sorteio ativo associado ao seu usuário. Verifique se você participou de um sorteio em um grupo e tente novamente."
 let RUNTIME_ERROR = "⚠️ Houve algum problema ao executar o comando. Verifique as minhas permissões, o histórico de comandos e tente novamente."
 let COMMAND_ERROR = "⚠️ Comando Inválido! Verifique se ele foi chamado corretamente com todos os argumentos exigidos."
-let HELP_MESSAGE = "O <b>Bot Secreto</b> é um BOT 🤖 que ajuda grupos de amigos a realizarem um Amigo Secreto 🎁 de qualquer tipo que seja. Para tudo funcionar, você precisa me adicionar em um grupo com os seus amigos e garantir que todos eles estejam lá antes de começar o jogo. Para gerenciar esse sorteio, existem uma série de comandos para te ajudar. A seguir você encontrará uma descrição mais detalhada de cada comando:\n\n/start - Inicia o BOT limpando todas as configurações realizadas.\n/help - Apresenta lista de comandos e detalhes sobre a sua execução, aka esta que você está vendo.\n/commands - Apresenta lista de comandos com descrição resumida.\n/addme - Você começará a fazer parte do sorteio. Caso já faça, nada acontecerá.\n/removeme - Você deixará de fazer parte do sorteio. Caso já faça, nada acontecerá.\n/blockpair - Execute esse comando marcando 2 participantes do sorteio e eles ficarão impedidos de sortear um ao outro.\n/unblockpair - Desfaz restrição entre 2 usuários. Caso não exista, nada acontecerá.\n/list - Lista todas as configurações atuais sobre o jogo, mostrando os usuários que irão participar, os que não irão e os que não irão tirar um ou outro.\n/play - Inicia o sorteio e informa para cada participante no privado quem ele deve presentear. Qualquer alteração sobre as configurações do sorteio não podem mais ser realizadas, apenas usando o comando /start.\n/chatget - Envia uma mensagem anônima e privada para a pessoa que vai te presentear, basta executar esse comando seguido da mensagem que desejar.\n/chatgive - Envia uma mensagem anônima e privada para a pessoa que você deve presentear, basta executar esse comando seguido da mensagem que desejar.\n\nResumindo: comece com /start, use o /addme, /removeme, /blockpair e /unblockpair para configurar as restrições do sorteio, use o /list para verificar o estado atual das restrições, comece com o /play, converse com os seus amigos secretos usando o /chatget e o /chatgive e termine o jogo informando a todos quem tirou quem.\n\nE o mais importante, <b>divirtam-se! 🥳🎁🎉</b>"
-let COMMANDS_MESSAGE = "/start - Inicia o BOT limpando todas as configurações.\n/help - Apresenta lista de comandos e detalhes sobre a sua execução.\n/commands - Apresenta lista de comandos.\n/addme - Você começará a fazer parte do sorteio.\n/removeme - Você deixará de fazer parte do sorteio.\n/blockpair - Impede que 2 usuários sorteiem um ao outro.\n/unblockpair - Desfaz restrição entre 2 usuários.\n/list - Lista todas as configurações atuais sobre o jogo.\n/play - Inicia o sorteio.\n/chatget - Envia uma mensagem anônima e privada para a pessoa que vai te presentear.\n/chatgive - Envia uma mensagem anônima e privada para a pessoa que você deve presentear."
-let COMMAND_ERROR_PRIVATE = "⚠️ Este comando só pode ser utilizado em um grupo!"
-let COMMAND_ERROR_GROUP = "⚠️ Este comando só pode ser utilizado em uma mensagem privada!"
+let HELP_MESSAGE = "O <b>Bot Secreto</b> é um BOT 🤖 que ajuda grupos de amigos a realizarem um Amigo Secreto 🎁 de qualquer tipo que seja. Para tudo funcionar, você precisa me adicionar em um grupo com os seus amigos e garantir que todos eles estejam lá antes de começar o jogo. Para gerenciar esse sorteio, existem uma série de comandos para te ajudar. A seguir você encontrará uma descrição mais detalhada de cada comando:\n\n/start - Inicia o BOT limpando todas as configurações realizadas.\n/help - Apresenta lista de comandos e detalhes sobre a sua execução, aka esta que você está vendo.\n/commands - Apresenta lista de comandos com descrição resumida.\n/addme - Você começará a fazer parte do sorteio. Caso já faça, nada acontecerá.\n/removeme - Você deixará de fazer parte do sorteio. Caso já faça, nada acontecerá.\n/blockpair - Execute esse comando marcando 2 participantes do sorteio e eles ficarão impedidos de sortear um ao outro.\n/unblockpair - Desfaz restrição entre 2 usuários. Caso não exista, nada acontecerá.\n/list - Lista todas as configurações atuais sobre o jogo, mostrando os usuários que irão participar, os que não irão e os que não irão tirar um ou outro.\n/play - Inicia o sorteio e informa para cada participante no privado quem ele deve presentear. Qualquer alteração sobre as configurações do sorteio não podem mais ser realizadas, apenas usando o comando /start.\n\nResumindo: comece com /start, use o /addme, /removeme, /blockpair e /unblockpair para configurar as restrições do sorteio, use o /list para verificar o estado atual das restrições, comece com o /play, converse com os seus amigos secretos usando os BOTs @botsecretogetbot e @botsecretogivebot e termine o jogo informando a todos quem tirou quem.\n\nE o mais importante, <b>divirtam-se! 🥳🎁🎉</b>"
+let HELP_PRIVATE_MESSAGE = "O <b>Bot Secreto</b> é um BOT 🤖 que ajuda grupos de amigos a realizarem um Amigo Secreto 🎁 de qualquer tipo que seja. Para tudo funcionar, você precisa me adicionar em um grupo com os seus amigos e garantir que todos eles estejam lá antes de começar o jogo. Imagino que, se você chegou aqui, já realizou o sorteio em um grupo. Se for o caso, basta executar o comando /start e começar a enviar mensagens anonimas para o seu Amigo Secreto. 🥳🎁🎉"
+let COMMANDS_MESSAGE = "/start - Inicia o BOT limpando todas as configurações.\n/help - Apresenta lista de comandos e detalhes sobre a sua execução.\n/commands - Apresenta lista de comandos.\n/addme - Você começará a fazer parte do sorteio.\n/removeme - Você deixará de fazer parte do sorteio.\n/blockpair - Impede que 2 usuários sorteiem um ao outro.\n/unblockpair - Desfaz restrição entre 2 usuários.\n/list - Lista todas as configurações atuais sobre o jogo.\n/play - Inicia o sorteio."
+let COMMAND_ERROR_PRIVATE = "⚠️ Esse BOT só pode ser utilizado em um grupo!"
+let COMMAND_ERROR_GROUP = "⚠️ Esse BOT só pode ser utilizado em um chat privado!"
 let ADD_USER = "✅ O usuário %@ foi adicionado ao sorteio."
 let ADDED_USER = "⚠️ O usuário %@ já fazia parte do sorteio."
 let REMOVE_USER = "❌ O usuário %@ foi removido do sorteio."
@@ -232,51 +237,47 @@ let USERS_PARTICIPATING = "<b>Participantes do sorteio:</b>"
 let USERS_NOT_MATCH = "<b>Pares impossíveis:</b>"
 let NO_USERS = "<i>Nenhum usuário</i>"
 let PLAY_LOADING = "⌛ Aguarde um momento enquanto eu realizo o sorteio..."
-let PLAY_SUCCESS = "<b>✅ Sorteio realizado com sucesso!</b>\nAgora cada um dos participantes deve me chamar no privado @botsecretobot para começar a falar uns com os outros anonimamente sobre detalhes dos presentes. Basta entrar no chat e me chamar com /start."
+let PLAY_SUCCESS = "<b>✅ Sorteio realizado com sucesso!</b>\nAgora cada um dos participantes deve chamar o BOT @botsecretogetbot, para falar com quem te dará um presente, e o BOT @botsecretogivebot, para descobrir e falar com quem você deve presentear, ambos anonimamente. Basta entrar no chat e me chamar com /start."
 let PLAY_ERROR = "❌ Houve algum erro ao realizar o sorteio! Verifique as restrições e os usuários que estão participando e tente novamente."
-let CHAT_FROM_GET = "<b>Participante que te presenteará disse:</b>\n<i>responda com /chatget</i>\n\n%@"
-let CHAT_FROM_GIVE = "<b>Participante que você deve presentear disse:</b>\n<i>responda com /chatgive</i>\n\n%@"
+let CHAT_FROM_GET = "<b>Participante que te presenteará disse:</b>\n%@"
+let CHAT_FROM_GIVE = "<b>Participante que você deve presentear disse:</b>\n%@"
 let CHAT_ERROR = "⚠️ Houve algum problema ao enviar essa mensagem! Provavelmente o usuário ainda não se conectou comigo ou existe algum bloqueio que me impede de lhe enviar mensagens."
+let CHAT_MEDIA_ERROR = "⚠️ Você não pode enviar essa mensagem! Para garantir o anonimato, envie apenas mensagens de texto impessoal."
 
 
 // MARK: Main
-var privateSessions: [Int64: Int64] = [:]
+var privateGetSessions: [Int64: Int64] = [:]
+var privateGiveSessions: [Int64: Int64] = [:]
 var sessions: [Int64: Session] = [:]
+
 let token = readToken(from: "BOT_SECRETO_TOKEN")
 let bot = TelegramBot(token: token)
 let router = Router(bot: bot)
 
+let tokenGet = readToken(from: "BOT_SECRETO_GET_TOKEN")
+let botGet = TelegramBot(token: tokenGet)
+let routerGet = Router(bot: botGet)
+
+let tokenGive = readToken(from: "BOT_SECRETO_GIVE_TOKEN")
+let botGive = TelegramBot(token: tokenGive)
+let routerGive = Router(bot: botGive)
+
+// MARK: - Main Router
 router[Command.start.rawValue, .slashRequired] = { context in
-    guard let chatId = context.chatId, let user = context.message?.from else {
+    guard !context.privateChat else {
+        context.respondAsync(COMMAND_ERROR_PRIVATE, parseMode: .html)
+        return true
+    }
+    guard let chatId = context.chatId else {
         context.respondAsync(RUNTIME_ERROR, parseMode: .html)
         return true
     }
-    if context.privateChat {
-        context.respondSync(START_PRIVATE_LOADING, parseMode: .html)
-        if let sessionId = privateSessions[chatId] {
-            if let session = sessions[sessionId], let userToGive = session.getUserToGive(userId: user.id) {
-                context.respondAsync(String(format: START_PRIVATE_MESSAGE, userToGive.firstName, userToGive.username ?? ""), parseMode: .html)
-            } else {
-                context.respondAsync(START_PRIVATE_ERROR, parseMode: .html)
-            }
-        } else {
-            if let session = sessions.first(where: { $0.value.userExists(userId: user.id) }),
-               let userToGive = session.value.getUserToGive(userId: user.id) {
-                privateSessions[chatId] = session.key
-                sessions[session.key]?.addUserDM(userId: user.id, chatId: chatId)
-                context.respondAsync(String(format: START_PRIVATE_MESSAGE, userToGive.firstName, userToGive.username ?? ""), parseMode: .html)
-            } else {
-                context.respondAsync(START_PRIVATE_ERROR, parseMode: .html)
-            }
-        }
+    if sessions[chatId] == nil {
+        context.respondAsync(START_MESSAGE, parseMode: .html)
     } else {
-        if sessions[chatId] == nil {
-            context.respondAsync(START_MESSAGE, parseMode: .html)
-        } else {
-            context.respondAsync(RESTART_MESSAGE, parseMode: .html)
-        }
-        sessions[chatId] = Session()
+        context.respondAsync(RESTART_MESSAGE, parseMode: .html)
     }
+    sessions[chatId] = Session()
     return true
 }
 
@@ -397,56 +398,6 @@ router[Command.play.rawValue, .slashRequired] = { context in
     return true
 }
 
-router[Command.chatget.rawValue, .slashRequired] = { context in
-    guard context.privateChat else {
-        context.respondAsync(COMMAND_ERROR_GROUP, parseMode: .html)
-        return true
-    }
-    guard let user = context.message?.from,
-          let chatId = context.chatId, let sessionId = privateSessions[chatId], let session = sessions[sessionId] else {
-        context.respondAsync(RUNTIME_ERROR, parseMode: .html)
-        return true
-    }
-    let message = context.args.scanRestOfString()
-    guard !message.isEmpty else {
-        context.respondAsync(COMMAND_ERROR, parseMode: .html)
-        return true
-    }
-    if let userToGetChatId = session.getUserToGetDM(userId: user.id) {
-        bot.sendMessageSync(chatId: ChatId.chat(userToGetChatId),
-                            text: String(format: CHAT_FROM_GIVE, message),
-                            parseMode: .html)
-    } else {
-        context.respondAsync(CHAT_ERROR, parseMode: .html)
-    }
-    return true
-}
-
-router[Command.chatgive.rawValue, .slashRequired] = { context in
-    guard context.privateChat else {
-        context.respondAsync(COMMAND_ERROR_GROUP, parseMode: .html)
-        return true
-    }
-    guard let user = context.message?.from,
-          let chatId = context.chatId, let sessionId = privateSessions[chatId], let session = sessions[sessionId] else {
-        context.respondAsync(RUNTIME_ERROR, parseMode: .html)
-        return true
-    }
-    let message = context.args.scanRestOfString()
-    guard !message.isEmpty else {
-        context.respondAsync(COMMAND_ERROR, parseMode: .html)
-        return true
-    }
-    if let userToGiveChatId = session.getUserToGiveDM(userId: user.id) {
-        bot.sendMessageSync(chatId: ChatId.chat(userToGiveChatId),
-                            text: String(format: CHAT_FROM_GET, message),
-                            parseMode: .html)
-    } else {
-        context.respondAsync(CHAT_ERROR, parseMode: .html)
-    }
-    return true
-}
-
 router.partialMatch = { _ in
     return true
 }
@@ -456,8 +407,182 @@ router.unmatched = { context in
     return true
 }
 
+// MARK: - Get Router
+routerGet[Command.start.rawValue, .slashRequired] = { context in
+    guard context.privateChat else {
+        context.respondAsync(COMMAND_ERROR_GROUP, parseMode: .html)
+        return true
+    }
+    guard let chatId = context.chatId, let user = context.message?.from else {
+        context.respondAsync(RUNTIME_ERROR, parseMode: .html)
+        return true
+    }
+    context.respondSync(START_PRIVATE_LOADING, parseMode: .html)
+    if let sessionId = privateGetSessions[chatId], sessions[sessionId] != nil {
+        context.respondAsync(START_PRIVATE_GET_MESSAGE, parseMode: .html)
+    } else {
+        if let session = sessions.first(where: { $0.value.userExists(userId: user.id) }) {
+            privateGetSessions[chatId] = session.key
+            sessions[session.key]?.addUserGetDM(userId: user.id, chatId: chatId)
+            context.respondAsync(START_PRIVATE_GET_MESSAGE, parseMode: .html)
+        } else {
+            context.respondAsync(START_PRIVATE_ERROR, parseMode: .html)
+        }
+    }
+    return true
+}
+
+routerGet[Command.help.rawValue, .slashRequired] = { context in
+    context.respondAsync(HELP_PRIVATE_MESSAGE, parseMode: .html)
+    return true
+}
+
+routerGet[.text] = { context in
+    guard context.privateChat else {
+        context.respondAsync(COMMAND_ERROR_GROUP, parseMode: .html)
+        return true
+    }
+    guard let user = context.message?.from,
+          let chatId = context.chatId, let sessionId = privateGetSessions[chatId], let session = sessions[sessionId] else {
+        context.respondAsync(RUNTIME_ERROR, parseMode: .html)
+        return true
+    }
+    guard let message = context.message?.text else {
+        context.respondAsync(COMMAND_ERROR, parseMode: .html)
+        return true
+    }
+    if let userToGetChatId = session.getUserToGetDM(userId: user.id) {
+        botGive.sendMessageSync(chatId: ChatId.chat(userToGetChatId),
+                                text: String(format: CHAT_FROM_GIVE, message),
+                                parseMode: .html)
+    } else {
+        context.respondAsync(CHAT_ERROR, parseMode: .html)
+    }
+    return true
+}
+
+routerGet.unsupportedContentType = { context in
+    context.respondAsync(CHAT_MEDIA_ERROR, parseMode: .html)
+    return true
+}
+
+routerGet.partialMatch = { _ in
+    return true
+}
+
+routerGet.unmatched = { context in
+    context.respondAsync(COMMAND_ERROR, parseMode: .html)
+    return true
+}
+
+// MARK: - Give Router
+routerGive[Command.start.rawValue, .slashRequired] = { context in
+    guard context.privateChat else {
+        context.respondAsync(COMMAND_ERROR_GROUP, parseMode: .html)
+        return true
+    }
+    guard let chatId = context.chatId, let user = context.message?.from else {
+        context.respondAsync(RUNTIME_ERROR, parseMode: .html)
+        return true
+    }
+    context.respondSync(START_PRIVATE_LOADING, parseMode: .html)
+    if let sessionId = privateGiveSessions[chatId] {
+        if let session = sessions[sessionId], let userToGive = session.getUserToGive(userId: user.id) {
+            context.respondAsync(String(format: START_PRIVATE_GIVE_MESSAGE, userToGive.firstName, userToGive.username ?? ""), parseMode: .html)
+        } else {
+            context.respondAsync(START_PRIVATE_ERROR, parseMode: .html)
+        }
+    } else {
+        if let session = sessions.first(where: { $0.value.userExists(userId: user.id) }),
+           let userToGive = session.value.getUserToGive(userId: user.id) {
+            privateGiveSessions[chatId] = session.key
+            sessions[session.key]?.addUserGiveDM(userId: user.id, chatId: chatId)
+            context.respondAsync(String(format: START_PRIVATE_GIVE_MESSAGE, userToGive.firstName, userToGive.username ?? ""), parseMode: .html)
+        } else {
+            context.respondAsync(START_PRIVATE_ERROR, parseMode: .html)
+        }
+    }
+    return true
+}
+
+routerGive[Command.help.rawValue, .slashRequired] = { context in
+    context.respondAsync(HELP_PRIVATE_MESSAGE, parseMode: .html)
+    return true
+}
+
+routerGive[.text] = { context in
+    guard context.privateChat else {
+        context.respondAsync(COMMAND_ERROR_GROUP, parseMode: .html)
+        return true
+    }
+    guard let user = context.message?.from,
+          let chatId = context.chatId, let sessionId = privateGiveSessions[chatId], let session = sessions[sessionId] else {
+        context.respondAsync(CHAT_ERROR, parseMode: .html)
+        return true
+    }
+    guard let message = context.message?.text else {
+        context.respondAsync(COMMAND_ERROR, parseMode: .html)
+        return true
+    }
+    if let userToGiveChatId = session.getUserToGiveDM(userId: user.id) {
+        botGet.sendMessageSync(chatId: ChatId.chat(userToGiveChatId),
+                               text: String(format: CHAT_FROM_GET, message),
+                               parseMode: .html)
+    } else {
+        context.respondAsync(CHAT_ERROR, parseMode: .html)
+    }
+    return true
+}
+
+routerGive.unsupportedContentType = { context in
+    context.respondAsync(CHAT_MEDIA_ERROR, parseMode: .html)
+    return true
+}
+
+routerGive.partialMatch = { _ in
+    return true
+}
+
+routerGive.unmatched = { context in
+    context.respondAsync(COMMAND_ERROR, parseMode: .html)
+    return true
+}
+
+// MARK: - Execution
+let queueGet = DispatchQueue(label: "br.com.botsecretogetbot")
+queueGet.async {
+    getBotExecute()
+}
+
+func getBotExecute() {
+    while let update = botGet.nextUpdateSync() {
+        do {
+            try routerGet.process(update: update)
+        } catch {
+            fatalError("Get Server stopped due to error: \(String(describing: botGet.lastError))")
+        }
+    }
+    fatalError("Get Server stopped due to error: \(String(describing: botGet.lastError))")
+}
+
+let queueGive = DispatchQueue(label: "br.com.botsecretogivebot")
+queueGive.async {
+    giveBotExecute()
+}
+
+func giveBotExecute() {
+    while let update = botGive.nextUpdateSync() {
+        do {
+            try routerGive.process(update: update)
+        } catch {
+            fatalError("Give Server stopped due to error: \(String(describing: botGive.lastError))")
+        }
+    }
+    fatalError("Give Server stopped due to error: \(String(describing: botGive.lastError))")
+}
+
 while let update = bot.nextUpdateSync() {
     try router.process(update: update)
 }
 
-fatalError("Server stopped due to error: \(String(describing: bot.lastError))")
+fatalError("Main Server stopped due to error: \(String(describing: bot.lastError))")

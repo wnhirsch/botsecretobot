@@ -19,5 +19,6 @@ blockpair - Impede que 2 usuários sorteiem um ao outro.
 unblockpair - Desfaz restrição entre 2 usuários.
 list - Lista todas as configurações atuais sobre o jogo.
 play - Inicia o sorteio.
-chatget - Envia uma mensagem anônima e privada para a pessoa que vai te presentear.
-chatgive - Envia uma mensagem anônima e privada para a pessoa que você deve presentear.
+
+start - Inicia/Reinicia o BOT limpando todas as configurações.
+help - Apresenta detalhes sobre a sua execução.
