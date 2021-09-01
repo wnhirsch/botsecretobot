@@ -1,5 +1,9 @@
 # botsecretobot
 
+O *@botsecretobot* é um BOT para o Telegram construido em Swift com o [Telegram Bot SDK](https://github.com/rapierorg/telegram-bot-swift) tendo o intuito de gerenciar um sorteio de Amigo Secreto em um grupo do Telegram.
+
+## Informações do BotFather
+
 ### Name
 Bot Secreto
 
@@ -9,7 +13,7 @@ O *Bot Secreto* é um BOT 🤖 que ajuda grupos de amigos a realizarem um Amigo 
 ### About
 Created by Wellington Nascente Hirsch (@well_in_town) with Swift 5 and Telegram Bot SDK.
 
-### Commands
+### Commands (Main)
 start - Inicia/Reinicia o BOT limpando todas as configurações.
 help - Apresenta lista de comandos e detalhes sobre a sua execução.
 commands - Apresenta lista de comandos.
@@ -20,5 +24,6 @@ unblockpair - Desfaz restrição entre 2 usuários.
 list - Lista todas as configurações atuais sobre o jogo.
 play - Inicia o sorteio.
 
+### Commands (Get/Give)
 start - Inicia/Reinicia o BOT limpando todas as configurações.
 help - Apresenta detalhes sobre a sua execução.

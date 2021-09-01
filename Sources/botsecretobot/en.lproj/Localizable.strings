@@ -1,0 +1,39 @@
+"runtime_error" = "⚠️ Houve algum problema ao executar o comando. Verifique as minhas permissões, o histórico de comandos e tente novamente.";
+"command_error" = "⚠️ Comando Inválido! Verifique se ele foi chamado corretamente com todos os argumentos exigidos.";
+
+"start_message" = "<b>Olá pessoal! 👋</b> Vim aqui para ajudar vocês nesse Amigo Secreto 🎁. Basta chamar todos os amigos que possam estar faltando, fazer as configurações com os comandos /addme, /removeme, /blockpair, /unblockpair e /list e começar o sorteio com o /play.\n\nCaso precise de ajuda com os comandos, basta usar o /help.";
+"restart_message" = "Sorteio reiniciado, todas configurações foram removidas! ✅";
+"start_private_loading" = "⌛ Aguarde um momento enquanto eu verifico a situação do seu sorteio...";
+"start_private_get_message" = "<b>✅ Perfeito, te encontrei!</b>\nVocê está participando de um Amigo Secreto ativo. Use somente este chat para entrar em contato com quem te presenteará.";
+"start_private_give_message" = "<b>✅ Perfeito, te encontrei!</b>\nVocê está participando de um Amigo Secreto ativo e o participante que te foi sorteado é...\n%@ @%@\n\n<b>⚠️NÃO DIVULGUE ESSA INFORMAÇÃO!⚠️</b>\nUse somente este chat para entrar em contato com quem você deve presentear.";
+"start_private_error" = "❌ Não encontrei nenhum sorteio ativo associado ao seu usuário. Verifique se você participou de um sorteio em um grupo e tente novamente.";
+
+"help_message" = "O <b>Bot Secreto</b> é um BOT 🤖 que ajuda grupos de amigos a realizarem um Amigo Secreto 🎁 de qualquer tipo que seja. Para tudo funcionar, você precisa me adicionar em um grupo com os seus amigos e garantir que todos eles estejam lá antes de começar o jogo. Para gerenciar esse sorteio, existem uma série de comandos para te ajudar. A seguir você encontrará uma descrição mais detalhada de cada comando:\n\n/start - Inicia o BOT limpando todas as configurações realizadas.\n/help - Apresenta lista de comandos e detalhes sobre a sua execução, aka esta que você está vendo.\n/commands - Apresenta lista de comandos com descrição resumida.\n/addme - Você começará a fazer parte do sorteio. Caso já faça, nada acontecerá.\n/removeme - Você deixará de fazer parte do sorteio. Caso já faça, nada acontecerá.\n/blockpair - Execute esse comando marcando 2 participantes do sorteio e eles ficarão impedidos de sortear um ao outro.\n/unblockpair - Desfaz restrição entre 2 usuários. Caso não exista, nada acontecerá.\n/list - Lista todas as configurações atuais sobre o jogo, mostrando os usuários que irão participar, os que não irão e os que não irão tirar um ou outro.\n/play - Inicia o sorteio e informa para cada participante no privado quem ele deve presentear. Qualquer alteração sobre as configurações do sorteio não podem mais ser realizadas, apenas usando o comando /start.\n\nResumindo: comece com /start, use o /addme, /removeme, /blockpair e /unblockpair para configurar as restrições do sorteio, use o /list para verificar o estado atual das restrições, comece com o /play, converse com os seus amigos secretos usando os BOTs @botsecretogetbot e @botsecretogivebot e termine o jogo informando a todos quem tirou quem.\n\nE o mais importante, <b>divirtam-se! 🥳🎁🎉</b>";
+"help_private_message" = "O <b>Bot Secreto</b> é um BOT 🤖 que ajuda grupos de amigos a realizarem um Amigo Secreto 🎁 de qualquer tipo que seja. Para tudo funcionar, você precisa me adicionar em um grupo com os seus amigos e garantir que todos eles estejam lá antes de começar o jogo. Imagino que, se você chegou aqui, já realizou o sorteio em um grupo. Se for o caso, basta executar o comando /start e começar a enviar mensagens anonimas para o seu Amigo Secreto. 🥳🎁🎉";
+
+"commands_message" = "/start - Inicia o BOT limpando todas as configurações.\n/help - Apresenta lista de comandos e detalhes sobre a sua execução.\n/commands - Apresenta lista de comandos.\n/addme - Você começará a fazer parte do sorteio.\n/removeme - Você deixará de fazer parte do sorteio.\n/blockpair - Impede que 2 usuários sorteiem um ao outro.\n/unblockpair - Desfaz restrição entre 2 usuários.\n/list - Lista todas as configurações atuais sobre o jogo.\n/play - Inicia o sorteio.";
+"command_error_private" = "⚠️ Esse BOT só pode ser utilizado em um grupo!";
+"command_error_group" = "⚠️ Esse BOT só pode ser utilizado em um chat privado!";
+
+"add_user" = "✅ O usuário %@ foi adicionado ao sorteio.";
+"added_user" = "⚠️ O usuário %@ já fazia parte do sorteio.";
+"remove_user" = "❌ O usuário %@ foi removido do sorteio.";
+"removed_user" = "⚠️ O usuário %@ não fazia parte do sorteio.";
+
+"block_pair" = "❌ Os usuários %@ e %@ não poderão sortear um ao outro.";
+"blocked_pair" = "⚠️ Os usuários %@ e %@ já não podiam sortear um ao outro.";
+"unblock_pair" = "✅ Os usuários %@ e %@ poderão sortear um ao outro.";
+"unblocked_pair" = "⚠️ Os usuários %@ e %@ já podiam sortear um ao outro.";
+
+"users_participating" = "<b>Participantes do sorteio:</b>";
+"users_not_match" = "<b>Pares impossíveis:</b>";
+"no_users" = "<i>Nenhum usuário</i>";
+
+"play_loading" = "⌛ Aguarde um momento enquanto eu realizo o sorteio...";
+"play_success" = "<b>✅ Sorteio realizado com sucesso!</b>\nAgora cada um dos participantes deve chamar o BOT @botsecretogetbot, para falar com quem te dará um presente, e o BOT @botsecretogivebot, para descobrir e falar com quem você deve presentear, ambos anonimamente. Basta entrar no chat e me chamar com /start.";
+"play_error" = "❌ Houve algum erro ao realizar o sorteio! Verifique as restrições e os usuários que estão participando e tente novamente.";
+
+"chat_from_get" = "<b>Participante que te presenteará disse:</b>\n%@";
+"chat_from_give" = "<b>Participante que você deve presentear disse:</b>\n%@";
+"chat_error" = "⚠️ Houve algum problema ao enviar essa mensagem! Provavelmente o usuário ainda não se conectou comigo ou existe algum bloqueio que me impede de lhe enviar mensagens.";
+"chat_media_error" = "⚠️ Você não pode enviar essa mensagem! Para garantir o anonimato, envie apenas mensagens de texto impessoal.";

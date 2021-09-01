@@ -1,0 +1,945 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2260D55826DF249800EFFA44 /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = 2260D55626DF243600EFFA44 /* Localizable.strings */; };
+		2260D55A26DF26A600EFFA44 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260D55926DF26A600EFFA44 /* Extensions.swift */; };
+		2260D55C26DF2C2600EFFA44 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260D55B26DF2C2600EFFA44 /* Enums.swift */; };
+		2260D55E26DF2C6900EFFA44 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260D55D26DF2C6900EFFA44 /* Session.swift */; };
+		OBJ_100 /* TelegramBot+sendChatAction+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* TelegramBot+sendChatAction+Utils.swift */; };
+		OBJ_101 /* MimeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* MimeTypes.swift */; };
+		OBJ_102 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Arguments.swift */; };
+		OBJ_103 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Command.swift */; };
+		OBJ_104 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* ContentType.swift */; };
+		OBJ_105 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Context.swift */; };
+		OBJ_106 /* Router+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Router+Helpers.swift */; };
+		OBJ_107 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Router.swift */; };
+		OBJ_108 /* TaskAssociatedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* TaskAssociatedData.swift */; };
+		OBJ_109 /* TelegramBot+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* TelegramBot+Requests.swift */; };
+		OBJ_110 /* TelegramBot+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* TelegramBot+Utils.swift */; };
+		OBJ_111 /* TelegramBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* TelegramBot.swift */; };
+		OBJ_112 /* ChatId.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* ChatId.swift */; };
+		OBJ_113 /* ChatMember+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* ChatMember+Status.swift */; };
+		OBJ_114 /* ChatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* ChatType.swift */; };
+		OBJ_115 /* InlineQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* InlineQueryResult.swift */; };
+		OBJ_116 /* InputFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* InputFile.swift */; };
+		OBJ_117 /* InputFileOrString.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* InputFileOrString.swift */; };
+		OBJ_118 /* InputMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* InputMedia.swift */; };
+		OBJ_119 /* InputMessageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* InputMessageContent.swift */; };
+		OBJ_120 /* Message+Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Message+Command.swift */; };
+		OBJ_121 /* MessageEntity+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* MessageEntity+Utils.swift */; };
+		OBJ_122 /* MessageOrBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* MessageOrBool.swift */; };
+		OBJ_123 /* ParseMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* ParseMode.swift */; };
+		OBJ_124 /* PollType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* PollType.swift */; };
+		OBJ_125 /* ReplyMarkup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* ReplyMarkup.swift */; };
+		OBJ_126 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* Response.swift */; };
+		OBJ_127 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* Utils.swift */; };
+		OBJ_128 /* WriteCallbackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* WriteCallbackData.swift */; };
+		OBJ_130 /* CCurl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "TelegramBotSDK::CCurl::Product" /* CCurl.framework */; };
+		OBJ_137 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* Package.swift */; };
+		OBJ_143 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
+		OBJ_145 /* TelegramBotSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "TelegramBotSDK::TelegramBotSDK::Product" /* TelegramBotSDK.framework */; };
+		OBJ_146 /* CCurl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "TelegramBotSDK::CCurl::Product" /* CCurl.framework */; };
+		OBJ_154 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_78 /* shim.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* shim.c */; };
+		OBJ_85 /* BotName.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* BotName.swift */; };
+		OBJ_86 /* DataTaskError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* DataTaskError.swift */; };
+		OBJ_87 /* DictionaryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* DictionaryUtils.swift */; };
+		OBJ_88 /* NSRunLoop+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* NSRunLoop+Utils.swift */; };
+		OBJ_89 /* Optional+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Optional+Unwrap.swift */; };
+		OBJ_90 /* Scanner+Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Scanner+Compatibility.swift */; };
+		OBJ_91 /* Scanner+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Scanner+Utils.swift */; };
+		OBJ_92 /* String+ExtractBotCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* String+ExtractBotCommand.swift */; };
+		OBJ_93 /* String+HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* String+HTTP.swift */; };
+		OBJ_94 /* String+Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* String+Trim.swift */; };
+		OBJ_95 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* String+Utils.swift */; };
+		OBJ_96 /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* Methods.swift */; };
+		OBJ_97 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Types.swift */; };
+		OBJ_98 /* HTTPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* HTTPUtils.swift */; };
+		OBJ_99 /* TelegramBot+getUpdates+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* TelegramBot+getUpdates+Utils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22ED258226D5ACED003B6AD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "TelegramBotSDK::TelegramBotSDK";
+			remoteInfo = TelegramBotSDK;
+		};
+		22ED258326D5ACED003B6AD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "TelegramBotSDK::CCurl";
+			remoteInfo = CCurl;
+		};
+		22ED258426D5ACED003B6AD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "TelegramBotSDK::CCurl";
+			remoteInfo = CCurl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2260D55726DF243600EFFA44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2260D55926DF26A600EFFA44 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2260D55B26DF2C2600EFFA44 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		2260D55D26DF2C6900EFFA44 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		22ED258B26D5C3D5003B6AD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_14 /* shim.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = shim.c; sourceTree = "<group>"; };
+		OBJ_16 /* shim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shim.h; sourceTree = "<group>"; };
+		OBJ_17 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "/Users/wnhirsch/Documents/botsecretobot/.build/checkouts/telegram-bot-swift/Sources/CCurl/include/module.modulemap"; sourceTree = "<group>"; };
+		OBJ_19 /* BotName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotName.swift; sourceTree = "<group>"; };
+		OBJ_20 /* DataTaskError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskError.swift; sourceTree = "<group>"; };
+		OBJ_21 /* DictionaryUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryUtils.swift; sourceTree = "<group>"; };
+		OBJ_23 /* NSRunLoop+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRunLoop+Utils.swift"; sourceTree = "<group>"; };
+		OBJ_24 /* Optional+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Unwrap.swift"; sourceTree = "<group>"; };
+		OBJ_25 /* Scanner+Compatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scanner+Compatibility.swift"; sourceTree = "<group>"; };
+		OBJ_26 /* Scanner+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scanner+Utils.swift"; sourceTree = "<group>"; };
+		OBJ_27 /* String+ExtractBotCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtractBotCommand.swift"; sourceTree = "<group>"; };
+		OBJ_28 /* String+HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTTP.swift"; sourceTree = "<group>"; };
+		OBJ_29 /* String+Trim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Trim.swift"; sourceTree = "<group>"; };
+		OBJ_30 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		OBJ_32 /* Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Methods.swift; sourceTree = "<group>"; };
+		OBJ_33 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		OBJ_34 /* HTTPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPUtils.swift; sourceTree = "<group>"; };
+		OBJ_36 /* TelegramBot+getUpdates+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TelegramBot+getUpdates+Utils.swift"; sourceTree = "<group>"; };
+		OBJ_37 /* TelegramBot+sendChatAction+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TelegramBot+sendChatAction+Utils.swift"; sourceTree = "<group>"; };
+		OBJ_38 /* MimeTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeTypes.swift; sourceTree = "<group>"; };
+		OBJ_40 /* Arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = "<group>"; };
+		OBJ_41 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		OBJ_42 /* ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
+		OBJ_43 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		OBJ_44 /* Router+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Helpers.swift"; sourceTree = "<group>"; };
+		OBJ_45 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		OBJ_46 /* TaskAssociatedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAssociatedData.swift; sourceTree = "<group>"; };
+		OBJ_47 /* TelegramBot+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TelegramBot+Requests.swift"; sourceTree = "<group>"; };
+		OBJ_48 /* TelegramBot+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TelegramBot+Utils.swift"; sourceTree = "<group>"; };
+		OBJ_49 /* TelegramBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramBot.swift; sourceTree = "<group>"; };
+		OBJ_51 /* ChatId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatId.swift; sourceTree = "<group>"; };
+		OBJ_52 /* ChatMember+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatMember+Status.swift"; sourceTree = "<group>"; };
+		OBJ_53 /* ChatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatType.swift; sourceTree = "<group>"; };
+		OBJ_54 /* InlineQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineQueryResult.swift; sourceTree = "<group>"; };
+		OBJ_55 /* InputFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFile.swift; sourceTree = "<group>"; };
+		OBJ_56 /* InputFileOrString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFileOrString.swift; sourceTree = "<group>"; };
+		OBJ_57 /* InputMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMedia.swift; sourceTree = "<group>"; };
+		OBJ_58 /* InputMessageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMessageContent.swift; sourceTree = "<group>"; };
+		OBJ_59 /* Message+Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+Command.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* MessageEntity+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageEntity+Utils.swift"; sourceTree = "<group>"; };
+		OBJ_61 /* MessageOrBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageOrBool.swift; sourceTree = "<group>"; };
+		OBJ_62 /* ParseMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseMode.swift; sourceTree = "<group>"; };
+		OBJ_63 /* PollType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollType.swift; sourceTree = "<group>"; };
+		OBJ_64 /* ReplyMarkup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyMarkup.swift; sourceTree = "<group>"; };
+		OBJ_65 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		OBJ_66 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		OBJ_67 /* WriteCallbackData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCallbackData.swift; sourceTree = "<group>"; };
+		OBJ_68 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/wnhirsch/Documents/botsecretobot/.build/checkouts/telegram-bot-swift/Package.swift"; sourceTree = "<group>"; };
+		OBJ_9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		"TelegramBotSDK::CCurl::Product" /* CCurl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CCurl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"TelegramBotSDK::TelegramBotSDK::Product" /* TelegramBotSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TelegramBotSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"botsecretobot::botsecretobot::Product" /* botsecretobot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = botsecretobot; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_129 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_130 /* CCurl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_145 /* TelegramBotSDK.framework in Frameworks */,
+				OBJ_146 /* CCurl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_10 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_11 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* TelegramBotSDK 2.1.2 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_12 /* TelegramBotSDK 2.1.2 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* CCurl */,
+				OBJ_18 /* TelegramBotSDK */,
+				OBJ_68 /* Package.swift */,
+			);
+			name = "TelegramBotSDK 2.1.2";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_13 /* CCurl */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_14 /* shim.c */,
+				OBJ_15 /* include */,
+			);
+			name = CCurl;
+			path = ".build/checkouts/telegram-bot-swift/Sources/CCurl";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_15 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_16 /* shim.h */,
+				OBJ_17 /* module.modulemap */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		OBJ_18 /* TelegramBotSDK */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* BotName.swift */,
+				OBJ_20 /* DataTaskError.swift */,
+				OBJ_21 /* DictionaryUtils.swift */,
+				OBJ_22 /* Extensions */,
+				OBJ_31 /* Generated */,
+				OBJ_34 /* HTTPUtils.swift */,
+				OBJ_35 /* Methods */,
+				OBJ_38 /* MimeTypes.swift */,
+				OBJ_39 /* Router */,
+				OBJ_46 /* TaskAssociatedData.swift */,
+				OBJ_47 /* TelegramBot+Requests.swift */,
+				OBJ_48 /* TelegramBot+Utils.swift */,
+				OBJ_49 /* TelegramBot.swift */,
+				OBJ_50 /* Types */,
+				OBJ_66 /* Utils.swift */,
+				OBJ_67 /* WriteCallbackData.swift */,
+			);
+			name = TelegramBotSDK;
+			path = ".build/checkouts/telegram-bot-swift/Sources/TelegramBotSDK";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_22 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* NSRunLoop+Utils.swift */,
+				OBJ_24 /* Optional+Unwrap.swift */,
+				OBJ_25 /* Scanner+Compatibility.swift */,
+				OBJ_26 /* Scanner+Utils.swift */,
+				OBJ_27 /* String+ExtractBotCommand.swift */,
+				OBJ_28 /* String+HTTP.swift */,
+				OBJ_29 /* String+Trim.swift */,
+				OBJ_30 /* String+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		OBJ_31 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_32 /* Methods.swift */,
+				OBJ_33 /* Types.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		OBJ_35 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_36 /* TelegramBot+getUpdates+Utils.swift */,
+				OBJ_37 /* TelegramBot+sendChatAction+Utils.swift */,
+			);
+			path = Methods;
+			sourceTree = "<group>";
+		};
+		OBJ_39 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_40 /* Arguments.swift */,
+				OBJ_41 /* Command.swift */,
+				OBJ_42 /* ContentType.swift */,
+				OBJ_43 /* Context.swift */,
+				OBJ_44 /* Router+Helpers.swift */,
+				OBJ_45 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				22ED258B26D5C3D5003B6AD9 /* README.md */,
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_10 /* Tests */,
+				OBJ_11 /* Dependencies */,
+				OBJ_69 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_50 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_51 /* ChatId.swift */,
+				OBJ_52 /* ChatMember+Status.swift */,
+				OBJ_53 /* ChatType.swift */,
+				OBJ_54 /* InlineQueryResult.swift */,
+				OBJ_55 /* InputFile.swift */,
+				OBJ_56 /* InputFileOrString.swift */,
+				OBJ_57 /* InputMedia.swift */,
+				OBJ_58 /* InputMessageContent.swift */,
+				OBJ_59 /* Message+Command.swift */,
+				OBJ_60 /* MessageEntity+Utils.swift */,
+				OBJ_61 /* MessageOrBool.swift */,
+				OBJ_62 /* ParseMode.swift */,
+				OBJ_63 /* PollType.swift */,
+				OBJ_64 /* ReplyMarkup.swift */,
+				OBJ_65 /* Response.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		OBJ_69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"TelegramBotSDK::CCurl::Product" /* CCurl.framework */,
+				"TelegramBotSDK::TelegramBotSDK::Product" /* TelegramBotSDK.framework */,
+				"botsecretobot::botsecretobot::Product" /* botsecretobot */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* botsecretobot */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* botsecretobot */ = {
+			isa = PBXGroup;
+			children = (
+				2260D55626DF243600EFFA44 /* Localizable.strings */,
+				2260D55B26DF2C2600EFFA44 /* Enums.swift */,
+				2260D55926DF26A600EFFA44 /* Extensions.swift */,
+				2260D55D26DF2C6900EFFA44 /* Session.swift */,
+				OBJ_9 /* main.swift */,
+			);
+			name = botsecretobot;
+			path = Sources/botsecretobot;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"TelegramBotSDK::CCurl" /* CCurl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_74 /* Build configuration list for PBXNativeTarget "CCurl" */;
+			buildPhases = (
+				OBJ_77 /* Sources */,
+				OBJ_79 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCurl;
+			productName = CCurl;
+			productReference = "TelegramBotSDK::CCurl::Product" /* CCurl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"TelegramBotSDK::SwiftPMPackageDescription" /* TelegramBotSDKPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_133 /* Build configuration list for PBXNativeTarget "TelegramBotSDKPackageDescription" */;
+			buildPhases = (
+				OBJ_136 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TelegramBotSDKPackageDescription;
+			productName = TelegramBotSDKPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"TelegramBotSDK::TelegramBotSDK" /* TelegramBotSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_81 /* Build configuration list for PBXNativeTarget "TelegramBotSDK" */;
+			buildPhases = (
+				OBJ_84 /* Sources */,
+				OBJ_129 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_131 /* PBXTargetDependency */,
+			);
+			name = TelegramBotSDK;
+			productName = TelegramBotSDK;
+			productReference = "TelegramBotSDK::TelegramBotSDK::Product" /* TelegramBotSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"botsecretobot::SwiftPMPackageDescription" /* botsecretobotPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_150 /* Build configuration list for PBXNativeTarget "botsecretobotPackageDescription" */;
+			buildPhases = (
+				OBJ_153 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = botsecretobotPackageDescription;
+			productName = botsecretobotPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"botsecretobot::botsecretobot" /* botsecretobot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_139 /* Build configuration list for PBXNativeTarget "botsecretobot" */;
+			buildPhases = (
+				OBJ_142 /* Sources */,
+				OBJ_144 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_147 /* PBXTargetDependency */,
+				OBJ_148 /* PBXTargetDependency */,
+			);
+			name = botsecretobot;
+			productName = botsecretobot;
+			productReference = "botsecretobot::botsecretobot::Product" /* botsecretobot */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"botsecretobot::botsecretobot" = {
+						DevelopmentTeam = 9BC293Z6NF;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "botsecretobot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"TelegramBotSDK::CCurl" /* CCurl */,
+				"TelegramBotSDK::TelegramBotSDK" /* TelegramBotSDK */,
+				"TelegramBotSDK::SwiftPMPackageDescription" /* TelegramBotSDKPackageDescription */,
+				"botsecretobot::botsecretobot" /* botsecretobot */,
+				"botsecretobot::SwiftPMPackageDescription" /* botsecretobotPackageDescription */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_136 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_137 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_142 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				2260D55E26DF2C6900EFFA44 /* Session.swift in Sources */,
+				2260D55826DF249800EFFA44 /* Localizable.strings in Sources */,
+				2260D55A26DF26A600EFFA44 /* Extensions.swift in Sources */,
+				2260D55C26DF2C2600EFFA44 /* Enums.swift in Sources */,
+				OBJ_143 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_154 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_78 /* shim.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_85 /* BotName.swift in Sources */,
+				OBJ_86 /* DataTaskError.swift in Sources */,
+				OBJ_87 /* DictionaryUtils.swift in Sources */,
+				OBJ_88 /* NSRunLoop+Utils.swift in Sources */,
+				OBJ_89 /* Optional+Unwrap.swift in Sources */,
+				OBJ_90 /* Scanner+Compatibility.swift in Sources */,
+				OBJ_91 /* Scanner+Utils.swift in Sources */,
+				OBJ_92 /* String+ExtractBotCommand.swift in Sources */,
+				OBJ_93 /* String+HTTP.swift in Sources */,
+				OBJ_94 /* String+Trim.swift in Sources */,
+				OBJ_95 /* String+Utils.swift in Sources */,
+				OBJ_96 /* Methods.swift in Sources */,
+				OBJ_97 /* Types.swift in Sources */,
+				OBJ_98 /* HTTPUtils.swift in Sources */,
+				OBJ_99 /* TelegramBot+getUpdates+Utils.swift in Sources */,
+				OBJ_100 /* TelegramBot+sendChatAction+Utils.swift in Sources */,
+				OBJ_101 /* MimeTypes.swift in Sources */,
+				OBJ_102 /* Arguments.swift in Sources */,
+				OBJ_103 /* Command.swift in Sources */,
+				OBJ_104 /* ContentType.swift in Sources */,
+				OBJ_105 /* Context.swift in Sources */,
+				OBJ_106 /* Router+Helpers.swift in Sources */,
+				OBJ_107 /* Router.swift in Sources */,
+				OBJ_108 /* TaskAssociatedData.swift in Sources */,
+				OBJ_109 /* TelegramBot+Requests.swift in Sources */,
+				OBJ_110 /* TelegramBot+Utils.swift in Sources */,
+				OBJ_111 /* TelegramBot.swift in Sources */,
+				OBJ_112 /* ChatId.swift in Sources */,
+				OBJ_113 /* ChatMember+Status.swift in Sources */,
+				OBJ_114 /* ChatType.swift in Sources */,
+				OBJ_115 /* InlineQueryResult.swift in Sources */,
+				OBJ_116 /* InputFile.swift in Sources */,
+				OBJ_117 /* InputFileOrString.swift in Sources */,
+				OBJ_118 /* InputMedia.swift in Sources */,
+				OBJ_119 /* InputMessageContent.swift in Sources */,
+				OBJ_120 /* Message+Command.swift in Sources */,
+				OBJ_121 /* MessageEntity+Utils.swift in Sources */,
+				OBJ_122 /* MessageOrBool.swift in Sources */,
+				OBJ_123 /* ParseMode.swift in Sources */,
+				OBJ_124 /* PollType.swift in Sources */,
+				OBJ_125 /* ReplyMarkup.swift in Sources */,
+				OBJ_126 /* Response.swift in Sources */,
+				OBJ_127 /* Utils.swift in Sources */,
+				OBJ_128 /* WriteCallbackData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_131 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "TelegramBotSDK::CCurl" /* CCurl */;
+			targetProxy = 22ED258326D5ACED003B6AD9 /* PBXContainerItemProxy */;
+		};
+		OBJ_147 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "TelegramBotSDK::TelegramBotSDK" /* TelegramBotSDK */;
+			targetProxy = 22ED258226D5ACED003B6AD9 /* PBXContainerItemProxy */;
+		};
+		OBJ_148 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "TelegramBotSDK::CCurl" /* CCurl */;
+			targetProxy = 22ED258426D5ACED003B6AD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2260D55626DF243600EFFA44 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2260D55726DF243600EFFA44 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.0.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_135 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.0.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BC293Z6NF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/telegram-bot-swift/Sources/CCurl/include",
+				);
+				INFOPLIST_FILE = botsecretobot.xcodeproj/botsecretobot_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/telegram-bot-swift/Sources/CCurl/include/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = botsecretobot;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BC293Z6NF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/telegram-bot-swift/Sources/CCurl/include",
+				);
+				INFOPLIST_FILE = botsecretobot.xcodeproj/botsecretobot_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/telegram-bot-swift/Sources/CCurl/include/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = botsecretobot;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/telegram-bot-swift/Sources/CCurl/include",
+				);
+				INFOPLIST_FILE = botsecretobot.xcodeproj/CCurl_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CCurl;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = CCurl;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/telegram-bot-swift/Sources/CCurl/include",
+				);
+				INFOPLIST_FILE = botsecretobot.xcodeproj/CCurl_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CCurl;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = CCurl;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/telegram-bot-swift/Sources/CCurl/include",
+				);
+				INFOPLIST_FILE = botsecretobot.xcodeproj/TelegramBotSDK_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/telegram-bot-swift/Sources/CCurl/include/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = TelegramBotSDK;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = TelegramBotSDK;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/telegram-bot-swift/Sources/CCurl/include",
+				);
+				INFOPLIST_FILE = botsecretobot.xcodeproj/TelegramBotSDK_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/telegram-bot-swift/Sources/CCurl/include/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = TelegramBotSDK;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = TelegramBotSDK;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_133 /* Build configuration list for PBXNativeTarget "TelegramBotSDKPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_134 /* Debug */,
+				OBJ_135 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_139 /* Build configuration list for PBXNativeTarget "botsecretobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_140 /* Debug */,
+				OBJ_141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_150 /* Build configuration list for PBXNativeTarget "botsecretobotPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_151 /* Debug */,
+				OBJ_152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "botsecretobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_74 /* Build configuration list for PBXNativeTarget "CCurl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_75 /* Debug */,
+				OBJ_76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_81 /* Build configuration list for PBXNativeTarget "TelegramBotSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_82 /* Debug */,
+				OBJ_83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
